@@ -36,11 +36,11 @@ def fatura_list():
 # Cobrança
 @app.route("/cobranca/<idFatura>", methods=['POST'])
 def cobranca_send(idFatura):
+    data = dict()
+    data["idFatura"] = int(idFatura)
+    data["situacao"] = "ENVIADO_COBRANCA"
+    return data
 
-    with open("fatura.json") as jsonfile:
-        data = json.load(jsonfile)
-        fatura = [item for item in data if str(item["id"]) == str(idFatura)]
-        if fatura:
-            return fatura[0]
-        else:
-            return "{}"
+
+if __name__ == '__main__':
+    app.run()
