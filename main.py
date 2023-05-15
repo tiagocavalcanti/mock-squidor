@@ -10,6 +10,7 @@ def hello_world():
                 <b>[GET]</b> <a href="/fatura"> /fatura </a> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Lista a fatura de todos os portadores <br>
                 <b>[GET]</b> <a href="/fatura?idPortador="> /fatura?idPortador= </a> &emsp;&ensp;&nbsp; Lista as faturas do portador <br>
                 <b>[POST]</b> <a href="/cobranca/{idFatura}="> /cobranca/{idFatura}</a> &ensp;&nbsp; Envia uma fatura para cobrança <br>
+                <b>[POST]</b> <a href="/insuremo/calculate="> /insuremo/calculate</a> &emsp;&nbsp; Simula o calculate da InsureMO <br>
     '''
 
 # Portador
@@ -42,5 +43,19 @@ def cobranca_send(idFatura):
     return data
 
 
-if __name__ == '__main__':
-    app.run()
+@app.route("/echo", methods=['POST'])
+def echo():
+    data = dict()
+
+    if request.data:
+        print(request.json)
+        data["data"] = json.dumps(request.json)
+    else:
+        data["data"] = ""
+
+    return data
+
+
+@app.route("/insuremo/calculate", methods=['POST'])
+def calculate():
+    return Response(open("calculate_response.json"), mimetype="application/json")
