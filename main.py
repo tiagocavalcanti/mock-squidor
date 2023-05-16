@@ -59,3 +59,17 @@ def echo():
 @app.route("/insuremo/calculate", methods=['POST'])
 def calculate():
     return Response(open("calculate_response.json"), mimetype="application/json")
+
+
+@app.route("/insuremo/bind", methods=['POST'])
+def bind():
+    return Response(open("bind_response.json"), mimetype="application/json")
+
+
+@app.route("/insuremo/issue", methods=['POST'])
+def issue():
+    return Response(open("issue_response.json"), mimetype="application/json")
+
+
+#if __name__ == "__main__":
+#    app.run()
