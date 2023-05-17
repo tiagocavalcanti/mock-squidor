@@ -57,12 +57,14 @@ def cobranca_send(idFatura):
 
 @app.route("/echo", methods=['POST'])
 def echo():
-
+    data = dict()
     if request.data:
         print(json.dumps(request.json, indent=2))
-        return request.json
+        data["data"] = json.dumps(request.json)
     else:
-        return Response("{}", mimetype="application/json")
+        data["data"] = ""
+
+    return data
 
 
 @app.route("/insuremo/calculate", methods=['POST'])
