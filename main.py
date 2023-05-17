@@ -19,6 +19,18 @@ def portador_list_all():
     return Response(open("portador.json"), mimetype="application/json")
 
 
+@app.route("/portador/<idPortador>")
+def portador_view(idPortador):
+    with open("portador.json") as jsonfile:
+        data = json.load(jsonfile)
+        # filtra o Portador
+        select = [x for x in data if str(x["id"]) == idPortador]
+        if select:
+            select = select[0]
+
+        return select
+
+
 # Fatura
 @app.route("/fatura")
 def fatura_list():
@@ -45,15 +57,12 @@ def cobranca_send(idFatura):
 
 @app.route("/echo", methods=['POST'])
 def echo():
-    data = dict()
 
     if request.data:
-        print(request.json)
-        data["data"] = json.dumps(request.json)
+        print(json.dumps(request.json, indent=2))
+        return request.json
     else:
-        data["data"] = ""
-
-    return data
+        return Response("{}", mimetype="application/json")
 
 
 @app.route("/insuremo/calculate", methods=['POST'])

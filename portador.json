@@ -1,14 +1,65 @@
 [
   {
     "id": 111,
-    "name": "Joaquin Teixeira"
+    "name": "Joaquin Teixeira",
+    "contatos": [
+      {
+        "tipo": "RESIDENCIAL",
+        "ddd": "83",
+        "telefone": "111111111"
+      },
+      {
+        "tipo": "CELULAR",
+        "ddd": "83",
+        "telefone": "222222222"
+      }
+    ]
   },
   {
     "id": 222,
-    "name": "Manoel Gomes"
+    "name": "Manoel Gomes",
+    "contatos": [
+      {
+        "tipo": "RESIDENCIAL",
+        "ddd": "83",
+        "telefone": "11111111111"
+      },
+      {
+        "tipo": "CELULAR",
+        "ddd": "83",
+        "telefone": "22222222222"
+      },
+      {
+        "tipo": "PESSOAL",
+        "ddd": "83",
+        "telefone": "333333333333"
+      }
+    ]
   },
   {
     "id": 333,
-    "name": "Elon Musk"
+    "name": "Elon Musk",
+    "contatos": [
+      {
+        "tipo": "RESIDENCIAL",
+        "ddd": "83",
+        "telefone": "11111111111"
+      },
+      {
+        "tipo": "CELULAR",
+        "ddd": "83",
+        "telefone": "22222222222"
+      },
+      {
+        "tipo": "PESSOAL",
+        "ddd": "83",
+        "telefone": "333333333333"
+      },
+      {
+        "tipo": "TRABALHO",
+        "ddd": "83",
+        "telefone": "4444444444444"
+      }
+    ]
   }
 ]
