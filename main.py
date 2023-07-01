@@ -1,3 +1,4 @@
+import time
 from flask import Flask, request, Response
 import json
 
@@ -59,7 +60,7 @@ def cobranca_send(idFatura):
 def echo():
     data = dict()
     if request.data:
-        print(json.dumps(request.json, indent=2))
+        print(json.dumps(request.json, indent=2, ensure_ascii=False))
         data["data"] = json.dumps(request.json)
     else:
         data["data"] = ""
@@ -69,18 +70,18 @@ def echo():
 
 @app.route("/insuremo/calculate", methods=['POST'])
 def calculate():
+    print(json.dumps(request.json, indent=2))
     return Response(open("calculate_response.json"), mimetype="application/json")
 
 
 @app.route("/insuremo/bind", methods=['POST'])
 def bind():
+    print(json.dumps(request.json, indent=2))
     return Response(open("bind_response.json"), mimetype="application/json")
 
 
 @app.route("/insuremo/issue", methods=['POST'])
 def issue():
+    print(json.dumps(request.json, indent=2))
     return Response(open("issue_response.json"), mimetype="application/json")
 
-
-#if __name__ == "__main__":
-#    app.run()
