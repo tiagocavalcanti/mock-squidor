@@ -85,3 +85,11 @@ def issue():
     print(json.dumps(request.json, indent=2))
     return Response(open("issue_response.json"), mimetype="application/json")
 
+@app.route("/campo-ausente-primeiro-objeto-da-lista", methods=['POST'])
+def campo_ausente_primeiro_objeto_da_fila():
+    return Response(open("campo_ausente_primeiro_objeto_da_lista.json"), mimetype="application/json")
+
+
+
+#if __name__ == "__main__":
+#    app.run()

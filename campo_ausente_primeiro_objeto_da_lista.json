@@ -1,0 +1,13 @@
+{
+  "patrimonio": [
+    {
+      "estado": "Pernambuco",
+      "tipo": "CASA"
+    },
+    {
+      "estado": "Paraíba",
+      "tipo": "APARTAMENTO",
+      "nome": "Tour Geneve"
+    }
+  ]
+}
