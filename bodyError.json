@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-07-26T23:09:30",
+  "timestampServer": "2023-07-27T02:09:29.550",
+  "traceId": "6d92f1e77692221d",
+  "code": "MO-PLATFORM-COMMON-E9998",
+  "message": "Exception has been thrown, check it in ELK with trace id: 6d92f1e77692221d."
+}

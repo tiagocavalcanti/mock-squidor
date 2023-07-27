@@ -47,6 +47,14 @@ def fatura_list():
             return data
 
 
+@app.route("/faturaError")
+def fatura_error_list():
+    with open("bodyError.json") as jsonfile:
+        data = json.load(jsonfile)
+        return Response(json.dumps(data), mimetype="application/json", status=400)
+
+
+
 # Cobrança
 @app.route("/cobranca/<idFatura>", methods=['POST'])
 def cobranca_send(idFatura):
