@@ -1,0 +1,17 @@
+{
+  "PolicyObject": {
+    "PolicyCustomerList": [
+      {
+        "Address": "Rua Oscar Caravelas",
+        "City": "3550308",
+        "PolicyId": "9531267413,B684FB2C54CFE00D54255DE956DC2732"
+      },
+      {
+        "Address": "Rua Samuel Morse",
+        "City": "3550308",
+        "MaritalStatus": "1",
+        "PolicyId": "9531267413,B684FB2C54CFE00D54255DE956DC2732"
+      }
+    ]
+  }
+}

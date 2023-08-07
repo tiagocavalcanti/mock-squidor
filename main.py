@@ -99,8 +99,13 @@ def campo_ausente_primeiro_objeto_da_fila():
 
 
 @app.route("/listaComplexa", methods=['GET'])
-def testeAlec():
+def listaComplexa():
     return Response(open("lista_complexa.json"), mimetype="application/json")
+
+
+@app.route("/maritalStatus", methods=['GET'])
+def maritalStatus():
+    return Response(open("maritalStatus.json"), mimetype="application/json")
 
 
 #if __name__ == "__main__":
