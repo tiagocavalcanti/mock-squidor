@@ -1,0 +1,41 @@
+{
+  "name": "Joaquin Teixeira",
+  "patrimonio": [
+    {
+      "bens": [
+        {
+          "bairro": "Manaira",
+          "inquilinos": [
+            {
+              "idade": "56",
+              "nome": "Jose da Silva"
+            }
+          ],
+          "nome": "Res. Cezane",
+          "tipo": "APARTAMENTO"
+        },
+        {
+          "bairro": "Altiplano",
+          "inquilinos": [
+            {
+              "nome": "Maria da Silva"
+            }
+          ],
+          "nome": "Bosque das Gameleiras",
+          "tipo": "CASA"
+        },
+        {
+          "inquilinos": [
+            {
+              "idade": "72",
+              "nome": "Seu Pedro"
+            }
+          ],
+          "nome": "Fazenda Real",
+          "tipo": "PROPRIEDADE_RURAL"
+        }
+      ],
+      "estado": "Paraiba"
+    }
+  ]
+}

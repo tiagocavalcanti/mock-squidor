@@ -98,6 +98,10 @@ def campo_ausente_primeiro_objeto_da_fila():
     return Response(open("campo_ausente_primeiro_objeto_da_lista.json"), mimetype="application/json")
 
 
+@app.route("/listaComplexa", methods=['GET'])
+def testeAlec():
+    return Response(open("lista_complexa.json"), mimetype="application/json")
+
 
 #if __name__ == "__main__":
 #    app.run()
